@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Economics of STK Toronto — Aidan Gill</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c9a84c;
+    --gold-mid: #8b6914;
+    --gold-dim: #6b5520;
+    --gold-deep: #4a3a18;
+    --bg: #0d0b08;
+    --bg-card: #110f0a;
+    --bg-card2: #160f07;
+    --text: #e8d5a3;
+    --text-muted: #7a6535;
+    --text-dim: #5a4c28;
+    --border: #2a2218;
+    --border-gold: #8b6914;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,11,8,0.97);
+    border-bottom: 1px solid var(--border-gold);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(8px);
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .nav-brand small {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px;
+    letter-spacing: 4px;
+    color: var(--gold-mid);
+    font-weight: 300;
+    margin-top: 3px;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    text-align: center;
+    padding: 6rem 2rem 5rem;
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(ellipse at 50% 0%, #1c1408 0%, var(--bg) 65%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 10%; right: 10%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-gold), transparent);
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 7vw, 72px);
+    font-weight: 300;
+    color: var(--text);
+    line-height: 1.05;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-dim);
+    letter-spacing: 1px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .div-line {
+    height: 1px;
+    width: 80px;
+    background: linear-gradient(to right, transparent, var(--border-gold));
+  }
+
+  .div-line.r { background: linear-gradient(to left, transparent, var(--border-gold)); }
+
+  .div-diamond {
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  /* LAYOUT */
+  .page-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem;
+  }
+
+  /* SECTION */
+  .menu-section {
+    padding: 4rem 0 1rem;
+  }
+
+  .section-course {
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.4rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+  }
+
+  .section-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  /* CARDS */
+  .card {
+    border: 1px solid var(--border);
+    border-left: 2px solid var(--border-gold);
+    background: var(--bg-card);
+    padding: 1.75rem 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+  }
+
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--text);
+    letter-spacing: 0.5px;
+  }
+
+  .card-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    color: var(--gold-mid);
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    padding-top: 4px;
+  }
+
+  .card-body {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+
+  .card-body p { margin-bottom: 1rem; }
+  .card-body p:last-child { margin-bottom: 0; }
+
+  /* SPECIAL CARD */
+  .special-card {
+    border: 1px solid var(--border-gold);
+    background: var(--bg-card);
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .special-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--bg);
+    font-size: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .special-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .special-body {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+
+  .special-body p { margin-bottom: 1rem; }
+  .special-body p:last-child { margin-bottom: 0; }
+
+  .side-pairing {
+    border-top: 1px solid var(--border);
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .pairing-label {
+    font-size: 8px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+    margin-bottom: 0.6rem;
+  }
+
+  .pairing-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .pairing-body {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+
+  .pairing-body p { margin-bottom: 1rem; }
+  .pairing-body p:last-child { margin-bottom: 0; }
+
+  /* STATS ROW */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+  }
+
+  .stat-box {
+    background: var(--bg-card2);
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: var(--gold);
+    display: block;
+    letter-spacing: 1px;
+  }
+
+  .stat-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-top: 4px;
+  }
+
+  /* MAINS NUMBERED */
+  .mains-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+
+  .main-card {
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    padding: 2rem;
+    position: relative;
+  }
+
+  .main-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.75rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--border);
+    line-height: 1;
+    user-select: none;
+  }
+
+  .main-course-label {
+    font-size: 8px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+    margin-bottom: 0.5rem;
+  }
+
+  .main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--text);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    max-width: 85%;
+  }
+
+  .main-body {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+
+  .main-body p { margin-bottom: 1rem; }
+  .main-body p:last-child { margin-bottom: 0; }
+
+  .main-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 1.25rem 0;
+  }
+
+  /* QUOTE PULL */
+  .pull-quote {
+    border-left: 2px solid var(--gold);
+    padding: 0.75rem 1.5rem;
+    margin: 1.5rem 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--gold-dim);
+    line-height: 1.6;
+  }
+
+  /* DESSERT */
+  .dessert-card {
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    padding: 3rem 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dessert-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+
+  .dessert-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .dessert-body {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 2;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .dessert-body p { margin-bottom: 1rem; }
+  .dessert-body p:last-child { margin-bottom: 0; }
+
+  /* SOURCES */
+  .sources-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .sources-title {
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 1rem;
+  }
+
+  .sources-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .sources-list a {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+
+  .sources-list a:hover { color: var(--gold-mid); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: var(--gold-deep);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-sub {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">
+    STK Toronto
+    <small>An AP Economics Study</small>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#appetizer">Appetizer</a></li>
+    <li><a href="#special">Tonight's Special</a></li>
+    <li><a href="#mains">Main Courses</a></li>
+    <li><a href="#dessert">Dessert</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <p class="eyebrow">An AP Economics Summative &nbsp;·&nbsp; Aidan Gill &nbsp;·&nbsp; CIE3M (Bulger)</p>
+  <h1 class="hero-title">The <em>Economics</em><br>of STK Toronto</h1>
+  <p class="hero-sub">Yorkville &nbsp;·&nbsp; Toronto &nbsp;·&nbsp; Est. 2016</p>
+  <div class="divider">
+    <div class="div-line"></div>
+    <div class="div-diamond"></div>
+    <div class="div-line r"></div>
+  </div>
+  <p class="hero-tagline">A tasting menu of economic analysis</p>
+</header>
+
+<div class="page-wrap">
+
+  <!-- APPETIZER -->
+  <section class="menu-section" id="appetizer">
+    <p class="section-course">To Begin</p>
+    <h2 class="section-title">Appetizer</h2>
+    <p class="section-desc">A warm introduction to set the table</p>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">Who is STK Toronto?</h3>
+        <span class="card-tag">Introduction</span>
+      </div>
+      <div class="card-body">
+        <p>[WRITE YOUR INTRODUCTION HERE. Introduce STK Toronto — who they are, where they are, what makes them unique. Cover the 5Ws+H: STK is owned by The One Group Hospitality Inc., located in Yorkville, opened September 29 2016, 8,800 sq ft, seats 225 diners, 32 global locations. Mention Abid Chaudry as the largest shareholder at STK Toronto and his influence on decisions.]</p>
+        <p>[Continue with what makes STK stand out: the DJ booth, triple-A grade grass-fed beef, the luxury Yorkville location surrounded by designer boutiques and luxury hotels. Mention its consumer base — from regular diners to business deals like realtors bringing clients after closing.]</p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-value">8,800</span>
+        <p class="stat-label">Square Feet</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">225</span>
+        <p class="stat-label">Seats</p>
+      </div>
+      <div class="stat-box">
+        <span class="stat-value">32</span>
+        <p class="stat-label">Global Locations</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="div-line"></div>
+    <div class="div-diamond"></div>
+    <div class="div-line r"></div>
+  </div>
+
+  <!-- TONIGHT'S SPECIAL -->
+  <section class="menu-section" id="special">
+    <p class="section-course">Featured</p>
+    <h2 class="section-title">Tonight's Special</h2>
+    <p class="section-desc">The macroeconomic forces shaping every reservation</p>
+
+    <div class="special-card">
+      <span class="special-badge">Chef's Selection</span>
+      <h3 class="special-title">GDP Growth &amp; Inflation in Canada</h3>
+      <div class="special-body">
+        <p>[WRITE YOUR GDP & INFLATION ANALYSIS HERE. Explain what GDP growth is and why it matters. Present the data: 2023 — 1.25%, 2024 — 2.05%, 2025 — 1.74%. Explain why these numbers are misleading on their own.]</p>
+        <p>[Now bring in inflation: 2023 — 3.88%, 2024 — 2.38%, 2025 — 2.1%. Explain how inflation outstripping GDP growth means real purchasing power is declining. Connect this to STK: since it offers luxury goods with a high income elasticity coefficient, declining purchasing power directly reduces demand.]</p>
+        <p>[Include Abid Chaudry's quote about how the economy's performance is the biggest factor affecting the steakhouse. Connect to the revenue decline from $11M to $8M.]</p>
+      </div>
+
+      <div class="side-pairing">
+        <p class="pairing-label">Paired Side</p>
+        <h4 class="pairing-title">Unemployment in Toronto</h4>
+        <div class="pairing-body">
+          <p>[WRITE YOUR UNEMPLOYMENT ANALYSIS HERE. Introduce Toronto's unemployment rate of 8.2% as of April 2026, compared to the national average of 6.9%. Explain why this is significant for STK specifically — fewer employed consumers means a smaller customer base for a luxury good.]</p>
+          <p>[Connect to Abid Chaudry's comment that Toronto's unemployment makes the steakhouse more elastic here than in other cities like Alberta where the economy is booming. Explain the relationship between unemployment, consumer income, and demand for luxury goods.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="div-line"></div>
+    <div class="div-diamond"></div>
+    <div class="div-line r"></div>
+  </div>
+
+  <!-- MAIN COURSES -->
+  <section class="menu-section" id="mains">
+    <p class="section-course">The Heart of the Menu</p>
+    <h2 class="section-title">Main Courses</h2>
+    <p class="section-desc">Three essential economic concepts, prepared with care</p>
+
+    <div class="mains-grid">
+
+      <!-- MAIN I -->
+      <div class="main-card">
+        <span class="main-number">I</span>
+        <p class="main-course-label">First Course</p>
+        <h3 class="main-title">Monopolistic Competition</h3>
+        <div class="main-body">
+          <p>[WRITE YOUR MONOPOLISTIC COMPETITION ANALYSIS HERE. Define monopolistic competition: many competitors, slightly differentiated products, slight price control, low barriers to entry, high non-price competition. Explain how the demand curve sits above the MR curve, and how the market is neither allocatively nor productively efficient.]</p>
+          <div class="main-divider"></div>
+          <p>[Connect to STK: It competes with other high-end steakhouses in Toronto — Jacob & Co., Blueblood, Black & Blue. Unlike the average monopolistic competition firm, STK has higher barriers to entry given its Yorkville location and brand. Explain how STK uses non-price competition: Instagram advertising, the DJ booth, celebrity visits.]</p>
+          <div class="pull-quote">"STK Steakhouse uses several methods to differentiate themselves from other firms, which allows them to earn positive economic profit despite the common rule of 0 economic profit for long-run monopolistic competition firms."</div>
+          <p>[Explain excess capacity — STK could seat more people but uses MR=MC to profit maximize. Explain long-run equilibrium and how STK has managed to maintain economic profit over 10 years by sustaining differentiation.]</p>
+        </div>
+      </div>
+
+      <!-- MAIN II -->
+      <div class="main-card">
+        <span class="main-number">II</span>
+        <p class="main-course-label">Second Course</p>
+        <h3 class="main-title">Elasticity of Demand</h3>
+        <div class="main-body">
+          <p>[WRITE YOUR ELASTICITY ANALYSIS HERE. Define price elasticity of demand — how sensitive consumers are to price changes. Define inelastic (coefficient less than 1) vs elastic (coefficient greater than 1). Explain the characteristics of each and how luxury goods tend to be elastic.]</p>
+          <div class="main-divider"></div>
+          <p>[Connect to STK: The goal is to be as inelastic as possible. However, STK's elasticity is heavily dependent on the economy. In a booming economy, a $10 price increase barely affects the customer base. In a downturn — like now — the same increase could significantly decrease quantity demanded.]</p>
+          <p>[Bring in Abid Chaudry's comparison of Toronto vs. Alberta — in Alberta's stronger economy, luxury goods are bought more freely, making STK-equivalent businesses more inelastic there. Discuss income elasticity: since STK is a luxury normal good, its income elasticity coefficient is greater than 1.]</p>
+        </div>
+      </div>
+
+      <!-- MAIN III -->
+      <div class="main-card">
+        <span class="main-number">III</span>
+        <p class="main-course-label">Third Course</p>
+        <h3 class="main-title">Supply, Demand &amp; Market Equilibrium</h3>
+        <div class="main-body">
+          <p>[WRITE YOUR SUPPLY & DEMAND ANALYSIS HERE. Define supply and demand and their laws. Explain the 5 shifters of demand and the 5 shifters of supply. Explain market equilibrium — where quantity supplied equals quantity demanded.]</p>
+          <div class="main-divider"></div>
+          <p>[Connect to STK: Explain how STK determines pricing by observing competitors at their own caliber — not The Keg. Their steaks cost $40 to source and are priced at $70–$250, averaging around $100, giving roughly a 2.5x markup. This pricing strategy reflects where supply and demand intersect for their market tier.]</p>
+          <p>[Discuss the water example: $1 cost, $10–$15 price, customers consuming 3–4 per meal. This is a prime example of price discrimination enabled by the luxury environment. Each customer unknowingly contributes significant profit through water alone. Explain how the luxury setting and brand shift the demand curve rightward — customers are willing to pay more for the same bottle of water than they would elsewhere.]</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="div-line"></div>
+    <div class="div-diamond"></div>
+    <div class="div-line r"></div>
+  </div>
+
+  <!-- DESSERT -->
+  <section class="menu-section" id="dessert">
+    <p class="section-course">To Finish</p>
+    <h2 class="section-title">Dessert</h2>
+    <p class="section-desc">Something sweet to close the evening</p>
+
+    <div class="dessert-card">
+      <h3 class="dessert-title">Conclusion</h3>
+      <div class="dessert-body">
+        <p>[WRITE YOUR CONCLUSION HERE. Summarize who STK Toronto is and why it was a compelling subject for economic analysis. Briefly tie together all three main course concepts — how monopolistic competition, elasticity, and supply/demand each explain a different dimension of STK's business.]</p>
+        <p>[Reflect on the current economic environment: declining GDP growth, inflation outpacing income, and high Toronto unemployment are all compressing demand for luxury goods. STK's revenue decline from $11M to $8M is a direct expression of these forces.]</p>
+        <p>[End on a forward-looking note: STK has the differentiation, brand, and quality to weather economic downturns. As the economy recovers, its inelasticity will return, its business-dining clientele will grow, and its position in Toronto's luxury dining market will remain strong.]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <div class="sources-section">
+    <p class="sources-title">Sources</p>
+    <ul class="sources-list">
+      <li><a href="https://ir.togrp.com/press-releases/detail/395/the-one-group-announces-opening-of-stk-toronto" target="_blank">The One Group — STK Toronto Opening Press Release</a></li>
+      <li><a href="https://togrp.com/" target="_blank">The One Group Hospitality Inc.</a></li>
+      <li><a href="https://stksteakhouse.com/en-us/location/toronto/" target="_blank">STK Steakhouse — Toronto Location</a></li>
+      <li><a href="https://www.macrotrends.net/global-metrics/countries/can/canada/gdp-growth-rate" target="_blank">Macrotrends — Canada GDP Growth Rate</a></li>
+      <li><a href="https://www.macrotrends.net/global-metrics/countries/can/canada/inflation-rate-cpi" target="_blank">Macrotrends — Canada Inflation Rate (CPI)</a></li>
+      <li><a href="https://www.fraserinstitute.org/commentary/torontos-unemployment-rate-remains-high-particularly-young-people" target="_blank">Fraser Institute — Toronto Unemployment Rate</a></li>
+      <li><a href="https://tradingeconomics.com/canada/unemployment-rate" target="_blank">Trading Economics — Canada Unemployment Rate</a></li>
+      <li><a href="https://stksteakhouse.olo.com/menu/stk-toronto-on#steaks" target="_blank">STK Toronto — Menu</a></li>
+      <li><a href="https://dolcemag.com/web-exclusives/stk-toronto-hosts-grand-opening-party/22186/" target="_blank">Dolce Magazine — STK Toronto Grand Opening</a></li>
+      <li><a href="https://tradingeconomics.com/canada/full-year-gdp-growth" target="_blank">Trading Economics — Canada Full Year GDP Growth</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">STK Toronto &nbsp;·&nbsp; Economics</p>
+  <p class="footer-sub">CIE3M &nbsp;·&nbsp; Aidan Gill &nbsp;·&nbsp; 2026</p>
+</footer>
+
+</body>
+</html>
