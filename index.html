@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +35,6 @@
     line-height: 1.8;
   }
 
-  /* NAV */
   nav {
     position: sticky;
     top: 0;
@@ -86,7 +86,6 @@
 
   .nav-links a:hover { color: var(--gold); }
 
-  /* HERO */
   .hero {
     text-align: center;
     padding: 6rem 2rem 5rem;
@@ -122,10 +121,7 @@
     margin-bottom: 1rem;
   }
 
-  .hero-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
+  .hero-title em { font-style: italic; color: var(--gold); }
 
   .hero-sub {
     font-size: 10px;
@@ -143,7 +139,6 @@
     letter-spacing: 1px;
   }
 
-  /* DIVIDER */
   .divider {
     display: flex;
     align-items: center;
@@ -168,17 +163,13 @@
     flex-shrink: 0;
   }
 
-  /* LAYOUT */
   .page-wrap {
     max-width: 820px;
     margin: 0 auto;
     padding: 0 2rem 5rem;
   }
 
-  /* SECTION */
-  .menu-section {
-    padding: 4rem 0 1rem;
-  }
+  .menu-section { padding: 4rem 0 1rem; }
 
   .section-course {
     font-size: 9px;
@@ -205,7 +196,6 @@
     margin-bottom: 2rem;
   }
 
-  /* CARDS */
   .card {
     border: 1px solid var(--border);
     border-left: 2px solid var(--border-gold);
@@ -238,16 +228,66 @@
     padding-top: 4px;
   }
 
-  .card-body {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.9;
-  }
-
+  .card-body { font-size: 14px; color: var(--text-muted); line-height: 1.9; }
   .card-body p { margin-bottom: 1rem; }
   .card-body p:last-child { margin-bottom: 0; }
 
-  /* SPECIAL CARD */
+  .server-card {
+    border: 1px solid var(--border-gold);
+    background: var(--bg-card);
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .server-eyebrow {
+    font-size: 8px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+    margin-bottom: 0.75rem;
+  }
+
+  .server-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .server-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 0.3rem;
+  }
+
+  .server-role {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .server-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--text-muted);
+    margin: 0.75rem 0 1.25rem;
+    line-height: 1.6;
+  }
+
+  .server-body { font-size: 14px; color: var(--text-muted); line-height: 1.9; text-align: left; width: 100%; }
+  .server-body p { margin-bottom: 1rem; }
+  .server-body p:last-child { margin-bottom: 0; }
+
   .special-card {
     border: 1px solid var(--border-gold);
     background: var(--bg-card);
@@ -275,12 +315,7 @@
     letter-spacing: 0.5px;
   }
 
-  .special-body {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.9;
-  }
-
+  .special-body { font-size: 14px; color: var(--text-muted); line-height: 1.9; }
   .special-body p { margin-bottom: 1rem; }
   .special-body p:last-child { margin-bottom: 0; }
 
@@ -305,16 +340,10 @@
     margin-bottom: 0.75rem;
   }
 
-  .pairing-body {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.9;
-  }
-
+  .pairing-body { font-size: 14px; color: var(--text-muted); line-height: 1.9; }
   .pairing-body p { margin-bottom: 1rem; }
   .pairing-body p:last-child { margin-bottom: 0; }
 
-  /* STATS ROW */
   .stats-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -324,11 +353,7 @@
     border: 1px solid var(--border);
   }
 
-  .stat-box {
-    background: var(--bg-card2);
-    padding: 1.25rem;
-    text-align: center;
-  }
+  .stat-box { background: var(--bg-card2); padding: 1.25rem; text-align: center; }
 
   .stat-value {
     font-family: 'Cormorant Garamond', serif;
@@ -346,7 +371,6 @@
     margin-top: 4px;
   }
 
-  /* MAINS NUMBERED */
   .mains-grid { display: flex; flex-direction: column; gap: 1.25rem; }
 
   .main-card {
@@ -385,22 +409,12 @@
     max-width: 85%;
   }
 
-  .main-body {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.9;
-  }
-
+  .main-body { font-size: 14px; color: var(--text-muted); line-height: 1.9; }
   .main-body p { margin-bottom: 1rem; }
   .main-body p:last-child { margin-bottom: 0; }
 
-  .main-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 1.25rem 0;
-  }
+  .main-divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
 
-  /* QUOTE PULL */
   .pull-quote {
     border-left: 2px solid var(--gold);
     padding: 0.75rem 1.5rem;
@@ -412,7 +426,6 @@
     line-height: 1.6;
   }
 
-  /* DESSERT */
   .dessert-card {
     border: 1px solid var(--border);
     background: var(--bg-card);
@@ -439,18 +452,58 @@
     letter-spacing: 2px;
   }
 
-  .dessert-body {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 2;
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
+  .dessert-body { font-size: 14px; color: var(--text-muted); line-height: 2; max-width: 600px; margin: 0 auto; text-align: left; }
   .dessert-body p { margin-bottom: 1rem; }
   .dessert-body p:last-child { margin-bottom: 0; }
 
-  /* SOURCES */
+  .farewell {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--gold-dim);
+    text-align: center;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+  }
+
+  /* THINKING QUESTIONS */
+  .thinking-card {
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    padding: 2rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .thinking-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .question-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .question-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--gold);
+    flex-shrink: 0;
+    width: 24px;
+    line-height: 1.4;
+  }
+
+  .question-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.9;
+  }
+
   .sources-section {
     margin-top: 3rem;
     padding-top: 2rem;
@@ -465,12 +518,7 @@
     margin-bottom: 1rem;
   }
 
-  .sources-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
+  .sources-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
 
   .sources-list a {
     font-size: 11px;
@@ -482,7 +530,6 @@
 
   .sources-list a:hover { color: var(--gold-mid); }
 
-  /* FOOTER */
   footer {
     border-top: 1px solid var(--border);
     padding: 2.5rem;
@@ -508,7 +555,6 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-brand" href="#">
     STK Toronto
@@ -519,10 +565,10 @@
     <li><a href="#special">Tonight's Special</a></li>
     <li><a href="#mains">Main Courses</a></li>
     <li><a href="#dessert">Dessert</a></li>
+    <li><a href="#thinking">Thinking Questions</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <header class="hero">
   <p class="eyebrow">An AP Economics Summative &nbsp;·&nbsp; Aidan Gill &nbsp;·&nbsp; CIE3M (Bulger)</p>
   <h1 class="hero-title">The <em>Economics</em><br>of STK Toronto</h1>
@@ -549,8 +595,38 @@
         <span class="card-tag">Introduction</span>
       </div>
       <div class="card-body">
-        <p>[WRITE YOUR INTRODUCTION HERE. Introduce STK Toronto — who they are, where they are, what makes them unique. Cover the 5Ws+H: STK is owned by The One Group Hospitality Inc., located in Yorkville, opened September 29 2016, 8,800 sq ft, seats 225 diners, 32 global locations. Mention Abid Chaudry as the largest shareholder at STK Toronto and his influence on decisions.]</p>
-        <p>[Continue with what makes STK stand out: the DJ booth, triple-A grade grass-fed beef, the luxury Yorkville location surrounded by designer boutiques and luxury hotels. Mention its consumer base — from regular diners to business deals like realtors bringing clients after closing.]</p>
+        <p>STK Steakhouse is a high-end luxury steakhouse situated in the beautiful heart of Yorkville, Ontario. It is surrounded by lavishness, encompassing top-tier boutiques and luxury hotels, reinforcing the experience inside. STK Steakhouse is an established worldwide steakhouse having 32 locations globally, situated across 6 different countries. STK Toronto is featured on several different lists as one of the top 10 steakhouses in all of Toronto, demonstrating the premium experience provided to its consumers.</p>
+      </div>
+    </div>
+
+    <div class="server-card">
+      <p class="server-eyebrow">Your Server Tonight</p>
+      <div class="server-divider">
+        <div class="div-line" style="width:40px;"></div>
+        <div class="div-diamond"></div>
+        <div class="div-line r" style="width:40px;"></div>
+      </div>
+      <h3 class="server-name">Abid Chaudry</h3>
+      <p class="server-role">Largest Shareholder &nbsp;·&nbsp; STK Toronto</p>
+      <div class="server-divider" style="margin: 1rem 0;">
+        <div class="div-line" style="width:40px;"></div>
+        <div class="div-diamond"></div>
+        <div class="div-line r" style="width:40px;"></div>
+      </div>
+      <p class="server-quote">"Good evening. I'll be taking care of you tonight."</p>
+      <div class="server-body">
+        <p>Today, Abid Chaudry will be serving you. Abid Chaudry is a very high-level individual, being a significant stakeholder in One Group Hospitality Inc. One Group Hospitality Inc. is a publicly traded company that owns many different restaurants as a group. Collectively, they own 77 restaurants worldwide, consisting of STK Steakhouse, Benihana, Kona Grill, and more. Abid Chaudry is the largest stakeholder in STK Toronto and has control over most of the decisions that are made by the firm.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">A Closer Look</h3>
+        <span class="card-tag">Full Profile</span>
+      </div>
+      <div class="card-body">
+        <p>This beautiful location was opened to the public on September 29, 2016. The location is 8,800 square feet and seats approximately 225 diners at any given time. STK is a luxury steakhouse competing with its competitors being other high-end steakhouses in the GTA, like Jacobs and Co., Black and Blue, Blueblood, and more. However, STK is not just your average high-end steakhouse; it's unique, differentiating itself from its competitors. This steakhouse doesn't just encompass great quality food, with top-quality triple-A grade beef and high-end food, but it features an in-house DJ providing a "club-like" atmosphere, making it stand out from the rest. It's young, it's fun, and the food is outstanding.</p>
+        <p>STK is well-known for being an amazing quality steakhouse, with several celebrities recognizing its quality and having come to the steakhouse, including Justin Bieber, Drake, and more. STK Toronto is not just a spot for fine dining and enjoyment but is a hotspot for business, which is spoken about later on this menu. The consumer base of STK Toronto remains strong, being an established company, having great reviews, and providing the experience that everybody loves.</p>
       </div>
     </div>
 
@@ -584,19 +660,18 @@
 
     <div class="special-card">
       <span class="special-badge">Chef's Selection</span>
-      <h3 class="special-title">GDP Growth &amp; Inflation in Canada</h3>
+      <h3 class="special-title">Slowing GDP Growth &amp; Inflation in Canada</h3>
       <div class="special-body">
-        <p>[WRITE YOUR GDP & INFLATION ANALYSIS HERE. Explain what GDP growth is and why it matters. Present the data: 2023 — 1.25%, 2024 — 2.05%, 2025 — 1.74%. Explain why these numbers are misleading on their own.]</p>
-        <p>[Now bring in inflation: 2023 — 3.88%, 2024 — 2.38%, 2025 — 2.1%. Explain how inflation outstripping GDP growth means real purchasing power is declining. Connect this to STK: since it offers luxury goods with a high income elasticity coefficient, declining purchasing power directly reduces demand.]</p>
-        <p>[Include Abid Chaudry's quote about how the economy's performance is the biggest factor affecting the steakhouse. Connect to the revenue decline from $11M to $8M.]</p>
+        <p>There are several current events across Canada right now that are affecting STK Toronto. Tonight, we will be focusing on the slowing GDP Growth in Canada, Inflation in Canada, alongside unemployment in Toronto. These are a personal favourite of Abid Chaudry, stating that these are the most influential factors affecting STK Toronto today.</p>
+        <p>In Canada recently, the GDP growth per year has been extremely lower than necessary for sufficient economic growth, with most years showing GDP growth near none. Abid Chaudry also stated that the elasticity of the steakhouse is heavily dependent on the performance of the economy; this is more heavily covered later on the menu. Getting into specific statistics, the GDP growth in Canada was 1.25% in 2023, 2.05% in 2024, and 1.74% in 2025. These numbers may give the illusion that Canada's economy is progressing and growing just at a slow rate. However, this is not true at all, as you have to look at external factors, like inflation. Inflation in Canada for 2023 was 3.88%, in 2024 it was 2.38%, and in 2025 it was 2.1%. This is evidence that in recent years, inflation is outstripping GDP growth, decreasing the purchasing power of individuals who reside in Canada and consumers of STK Steakhouse.</p>
+        <p>Since STK Toronto carries luxury goods, the income elasticity coefficient for the steakhouse is very high, meaning that when consumer income decreases from economic downturns, the demand for the steakhouse significantly decreases. Residents of Canada are not the only individuals feeling this economic recession, but so are businesses. STK Toronto's revenue has noticed a significant drop, with it previously generating about $11 million per year compared to only about $8 million per year now. However, despite this, they are still making some economic profit in the market, uncommon in the long run for a monopolistically competitive firm; the reason for this will be spoken about later on the menu.</p>
       </div>
 
       <div class="side-pairing">
         <p class="pairing-label">Paired Side</p>
         <h4 class="pairing-title">Unemployment in Toronto</h4>
         <div class="pairing-body">
-          <p>[WRITE YOUR UNEMPLOYMENT ANALYSIS HERE. Introduce Toronto's unemployment rate of 8.2% as of April 2026, compared to the national average of 6.9%. Explain why this is significant for STK specifically — fewer employed consumers means a smaller customer base for a luxury good.]</p>
-          <p>[Connect to Abid Chaudry's comment that Toronto's unemployment makes the steakhouse more elastic here than in other cities like Alberta where the economy is booming. Explain the relationship between unemployment, consumer income, and demand for luxury goods.]</p>
+          <p>Unemployment in Toronto is a major current event issue for STK Steakhouse Toronto. As of April 2026, the unemployment rate for Toronto sits around 8.2%. This is observably larger than the national average of Canada at around 6.9%, an already concerning value. Having such a high unemployment rate is a major issue for a steakhouse like STK Toronto, leading to overall decreased salary statistics for the average Toronto citizen and a lack of sources of generated income for certain individuals.</p>
         </div>
       </div>
     </div>
@@ -616,43 +691,41 @@
 
     <div class="mains-grid">
 
-      <!-- MAIN I -->
       <div class="main-card">
         <span class="main-number">I</span>
         <p class="main-course-label">First Course</p>
         <h3 class="main-title">Monopolistic Competition</h3>
         <div class="main-body">
-          <p>[WRITE YOUR MONOPOLISTIC COMPETITION ANALYSIS HERE. Define monopolistic competition: many competitors, slightly differentiated products, slight price control, low barriers to entry, high non-price competition. Explain how the demand curve sits above the MR curve, and how the market is neither allocatively nor productively efficient.]</p>
+          <p>STK Steakhouse is a firm in a monopolistically competitive market. Characteristics of monopolistic competition include a relatively large number of competitors and firms in the market, low to mid barriers to entry, and high levels of non-price competition. In the Toronto area, there are several different high-end steakhouses including Jacobs and Co., Blueblood, Black and Blue, STK, and more.</p>
           <div class="main-divider"></div>
-          <p>[Connect to STK: It competes with other high-end steakhouses in Toronto — Jacob & Co., Blueblood, Black & Blue. Unlike the average monopolistic competition firm, STK has higher barriers to entry given its Yorkville location and brand. Explain how STK uses non-price competition: Instagram advertising, the DJ booth, celebrity visits.]</p>
-          <div class="pull-quote">"STK Steakhouse uses several methods to differentiate themselves from other firms, which allows them to earn positive economic profit despite the common rule of 0 economic profit for long-run monopolistic competition firms."</div>
-          <p>[Explain excess capacity — STK could seat more people but uses MR=MC to profit maximize. Explain long-run equilibrium and how STK has managed to maintain economic profit over 10 years by sustaining differentiation.]</p>
+          <p>STK Steakhouse Toronto uses the method of non-price competition extremely well, significantly increasing their demand for the firm. They differentiate themselves from their competitors by advertising significantly on their Instagram, and especially by portraying a different vibe than your average high-end steakhouse, increasing their demand curve significantly. This makes them slightly different from the average monopolistically competitive firm where most firms in monopolistically competitive market structures earn 0 economic profit. However, due to these strategies of differentiation, proven establishment, and top-tier quality of the steakhouse, it allows them to earn positive economic profit despite being in the market for 10 years.</p>
+          <div class="pull-quote">They are somewhat price makers and determine prices by looking at the performance of firms nearby — but it is essential to recognize that these firms have to be on their level in terms of quality.</div>
+          <p>This is extremely important and looking at a steakhouse like the Keg to determine their pricing strategy would not be effective. The reason for this is explored more in depth in the next main course, supply, demand, and market equilibrium.</p>
         </div>
       </div>
 
-      <!-- MAIN II -->
       <div class="main-card">
         <span class="main-number">II</span>
         <p class="main-course-label">Second Course</p>
-        <h3 class="main-title">Elasticity of Demand</h3>
+        <h3 class="main-title">Supply, Demand &amp; Market Equilibrium</h3>
         <div class="main-body">
-          <p>[WRITE YOUR ELASTICITY ANALYSIS HERE. Define price elasticity of demand — how sensitive consumers are to price changes. Define inelastic (coefficient less than 1) vs elastic (coefficient greater than 1). Explain the characteristics of each and how luxury goods tend to be elastic.]</p>
+          <p>Supply and demand significantly applies to STK Steakhouse Toronto. STK Toronto uses market equilibrium to determine their pricing methods by estimating their demand curve through methods of testing and looking at the performance of nearby firms that are on their level.</p>
           <div class="main-divider"></div>
-          <p>[Connect to STK: The goal is to be as inelastic as possible. However, STK's elasticity is heavily dependent on the economy. In a booming economy, a $10 price increase barely affects the customer base. In a downturn — like now — the same increase could significantly decrease quantity demanded.]</p>
-          <p>[Bring in Abid Chaudry's comparison of Toronto vs. Alberta — in Alberta's stronger economy, luxury goods are bought more freely, making STK-equivalent businesses more inelastic there. Discuss income elasticity: since STK is a luxury normal good, its income elasticity coefficient is greater than 1.]</p>
+          <p>STK Toronto's supply is the products that they have on their menu; the profits made off these menu items are dependent on their demand curve, their pricing methods, and the specific profit margins made on each of these menu items. STK's steaks range from around $70–$250 with some specific outliers on the more expensive end with rare wagyu cuts. Most steaks sit around the $100 mark, which ties back to the reason why STK Steakhouse Toronto prices based on steakhouses of their caliber and level. STK Steakhouse could not use a steakhouse like The Keg's performance with their pricing to determine their own. This is because STK's beef and food quality is significantly higher than a steakhouse like The Keg, with a steak alone costing them about $40–$50. This shows a fairly strong profit margin of about 2–2.5 times the price. If they based their pricing off The Keg, their profit margins would be little to none, leading to economic losses when accounting for other external costs.</p>
+          <p>The steak at STK Steakhouse may generate them the most revenue, but it is not their item with the highest profit margins. Due to the luxury experience provided by STK Toronto with their amazing location, quality of food, and unique vibe, they can price discriminate and upcharge on certain items to rake in extra profit. Bottled water costs STK about $1 to get but they can sell it for $10–$15, giving an absolutely huge 10–15x profit margin.</p>
         </div>
       </div>
 
-      <!-- MAIN III -->
       <div class="main-card">
         <span class="main-number">III</span>
         <p class="main-course-label">Third Course</p>
-        <h3 class="main-title">Supply, Demand &amp; Market Equilibrium</h3>
+        <h3 class="main-title">Price Elasticity of Demand</h3>
         <div class="main-body">
-          <p>[WRITE YOUR SUPPLY & DEMAND ANALYSIS HERE. Define supply and demand and their laws. Explain the 5 shifters of demand and the 5 shifters of supply. Explain market equilibrium — where quantity supplied equals quantity demanded.]</p>
+          <p>Price Elasticity of Demand is a concept that stems from the law of demand. The law of demand states that as price increases, consumers will buy less, and as price decreases, consumers will buy more. Price elasticity of demand refers to how much or how little consumers will buy in response to a price change.</p>
           <div class="main-divider"></div>
-          <p>[Connect to STK: Explain how STK determines pricing by observing competitors at their own caliber — not The Keg. Their steaks cost $40 to source and are priced at $70–$250, averaging around $100, giving roughly a 2.5x markup. This pricing strategy reflects where supply and demand intersect for their market tier.]</p>
-          <p>[Discuss the water example: $1 cost, $10–$15 price, customers consuming 3–4 per meal. This is a prime example of price discrimination enabled by the luxury environment. Each customer unknowingly contributes significant profit through water alone. Explain how the luxury setting and brand shift the demand curve rightward — customers are willing to pay more for the same bottle of water than they would elsewhere.]</p>
+          <p>The goal for a steakhouse is to make it as inelastic as possible to ensure that even if they have to increase the price, they can retain their customer base and generate revenue, not losing revenue due to a price increase. However, the reality is that the elasticity of the steakhouse depends heavily on the performance of the economy in the area. STK Steakhouse is considered a luxury good offering top-quality food, experience, and vibe. Due to the fact that Canada's economy is performing poorly right now with slowing GDP rates, increasing inflation rates, and major unemployment in Toronto, STK Steakhouse Toronto is more elastic currently.</p>
+          <p>Abid Chaudry owns several different restaurants across the globe and he stated that in Toronto specifically, he sees the most issue. He finds that the elasticity of demand for STK Steakhouse Toronto is significantly higher than luxury restaurants across the globe. An example that he gave was if you go to Alberta, luxury coffee shops have significant lines with luxury goods being significantly bought and used there due to the strength of the economy — showing more inelasticity where a slight price increase would retain most of their consumer base.</p>
+          <p>Another issue that makes STK Steakhouse Toronto specifically more elastic during economic downturns is from its consumer base that uses it as a place of business. When the economy is doing well, real estate agents make more deals and bring their customers to STK Toronto, allowing them to expand their business through referrals and accumulating more customers. This is a significant driver of STK Toronto's consumer base which occurs during economic growth and upturns — so when the market is slow, STK also loses this sector of their consumer base entirely.</p>
         </div>
       </div>
 
@@ -674,9 +747,47 @@
     <div class="dessert-card">
       <h3 class="dessert-title">Conclusion</h3>
       <div class="dessert-body">
-        <p>[WRITE YOUR CONCLUSION HERE. Summarize who STK Toronto is and why it was a compelling subject for economic analysis. Briefly tie together all three main course concepts — how monopolistic competition, elasticity, and supply/demand each explain a different dimension of STK's business.]</p>
-        <p>[Reflect on the current economic environment: declining GDP growth, inflation outpacing income, and high Toronto unemployment are all compressing demand for luxury goods. STK's revenue decline from $11M to $8M is a direct expression of these forces.]</p>
-        <p>[End on a forward-looking note: STK has the differentiation, brand, and quality to weather economic downturns. As the economy recovers, its inelasticity will return, its business-dining clientele will grow, and its position in Toronto's luxury dining market will remain strong.]</p>
+        <p>In conclusion, STK Steakhouse Toronto is not just any regular steakhouse — it's a perfect example of a luxury firm feeling the economic downturn and recessions of Canada. In central Yorkville, STK Toronto encompasses the true feeling of luxury before you even walk through the door. It is surrounded by luxury and provides a unique experience the second you walk in. It's different — not being the same as your average monopolistically competitive firm, earning positive economic profit despite being in the market for 10 years. It differentiates itself, and is a perfect example of what non-price competition should really look like.</p>
+        <p>Despite this, STK Toronto is still experiencing loss compared to previous years of the business. Their revenue has fallen significantly from previously making $11 million to now only about $8 million per year. With GDP growth rates falling, inflation rates increasing, and the rapidly growing issue of unemployment in Toronto, the demand for STK has unfortunately fallen. This is not an issue on STK's part — it's an issue of the economy.</p>
+        <p>However, STK Toronto is not looking to leave the market. They continue to operate for the customers, and through their resilience they will overcome this economic downturn in Canada, and continue to remain the best, the most unique, and the most resilient steakhouse in Toronto. STK Steakhouse is owned by The One Group Hospitality Inc. — they are not new to this, owning 77 restaurants across the globe. They will overcome the economic downturns of the market. Even more reassuring for STK, it is in the hands and control of Abid Chaudry, an extremely experienced individual in the restaurant business owning several personally across the globe, and having a master's in economics — he understands how to handle this.</p>
+        <p>Many steakhouses are currently exiting the market, with 7,000 restaurants closing in Canada just last year. However, STK perseveres. When the economy returns back to its positive state, so will STK Toronto's demand, and it will show you why it's not just your average monopolistically competitive luxury steakhouse. It's different, and it will continue to provide its unique experience that differentiates itself, remaining at the top of the luxury steakhouse market.</p>
+      </div>
+      <p class="farewell">Thanks for dining with us.</p>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="div-line"></div>
+    <div class="div-diamond"></div>
+    <div class="div-line r"></div>
+  </div>
+
+  <!-- THINKING QUESTIONS -->
+  <section class="menu-section" id="thinking">
+    <p class="section-course">After Dinner</p>
+    <h2 class="section-title">Thinking Questions</h2>
+    <p class="section-desc">Food for thought to take home</p>
+
+    <div class="thinking-card">
+      <div class="question-item">
+        <span class="question-number">1.</span>
+        <p class="question-text">Given that inflation is outstripping GDP growth in Canada, how does this affect the real purchasing power of STK Toronto's target demographic, and what does this mean for the steakhouse's demand curve in the short run?</p>
+      </div>
+      <div class="question-item">
+        <span class="question-number">2.</span>
+        <p class="question-text">STK Toronto has maintained positive economic profit for nearly 10 years despite operating in a monopolistically competitive market. What specific strategies of differentiation have allowed them to defy the long-run zero-profit equilibrium?</p>
+      </div>
+      <div class="question-item">
+        <span class="question-number">3.</span>
+        <p class="question-text">How does the concept of price elasticity of demand explain why STK Toronto is more affected by economic downturns than a mid-range steakhouse like The Keg?</p>
+      </div>
+      <div class="question-item">
+        <span class="question-number">4.</span>
+        <p class="question-text">STK charges $10–$15 for bottled water that costs $1. What economic concept does this best illustrate, and what conditions make this pricing strategy possible in a luxury environment?</p>
+      </div>
+      <div class="question-item">
+        <span class="question-number">5.</span>
+        <p class="question-text">With Toronto's unemployment rate at 8.2% — well above the national average — what specific shifts in STK Toronto's demand curve would you expect to see, and what could the steakhouse do to minimize the impact?</p>
       </div>
     </div>
   </section>
@@ -700,7 +811,6 @@
 
 </div>
 
-<!-- FOOTER -->
 <footer>
   <p class="footer-logo">STK Toronto &nbsp;·&nbsp; Economics</p>
   <p class="footer-sub">CIE3M &nbsp;·&nbsp; Aidan Gill &nbsp;·&nbsp; 2026</p>
