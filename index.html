@@ -426,6 +426,26 @@
     line-height: 1.6;
   }
 
+  /* Graph container */
+  .graph-wrap {
+    border: 1px solid var(--border-gold);
+    background: var(--bg-card2);
+    padding: 1.5rem 1.5rem 1rem;
+    margin: 1.5rem 0 0;
+  }
+
+  .graph-label {
+    font-size: 8px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold-mid);
+    margin-bottom: 0.75rem;
+  }
+
+  .graph-wrap svg text {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
   .dessert-card {
     border: 1px solid var(--border);
     background: var(--bg-card);
@@ -466,7 +486,6 @@
     letter-spacing: 1px;
   }
 
-  /* THINKING QUESTIONS */
   .thinking-card {
     border: 1px solid var(--border);
     background: var(--bg-card);
@@ -691,6 +710,7 @@
 
     <div class="mains-grid">
 
+      <!-- MAIN CARD I: Monopolistic Competition -->
       <div class="main-card">
         <span class="main-number">I</span>
         <p class="main-course-label">First Course</p>
@@ -701,9 +721,65 @@
           <p>STK Steakhouse Toronto uses the method of non-price competition extremely well, significantly increasing their demand for the firm. They differentiate themselves from their competitors by advertising significantly on their Instagram, and especially by portraying a different vibe than your average high-end steakhouse, increasing their demand curve significantly. This makes them slightly different from the average monopolistically competitive firm where most firms in monopolistically competitive market structures earn 0 economic profit. However, due to these strategies of differentiation, proven establishment, and top-tier quality of the steakhouse, it allows them to earn positive economic profit despite being in the market for 10 years.</p>
           <div class="pull-quote">They are somewhat price makers and determine prices by looking at the performance of firms nearby — but it is essential to recognize that these firms have to be on their level in terms of quality.</div>
           <p>This is extremely important and looking at a steakhouse like the Keg to determine their pricing strategy would not be effective. The reason for this is explored more in depth in the next main course, supply, demand, and market equilibrium.</p>
+
+          <!-- GRAPH 1: Monopolistic Competition -->
+          <div class="graph-wrap">
+            <p class="graph-label">Economic Model</p>
+            <svg width="100%" viewBox="0 0 680 440" role="img" xmlns="http://www.w3.org/2000/svg">
+              <title>Monopolistic competition diagram for STK Toronto</title>
+              <desc>Graph showing STK Toronto as a price maker with downward sloping demand curve, MR below it, MC and ATC curves, profit-maximizing output at MC=MR, and positive economic profit shaded.</desc>
+              <defs>
+                <marker id="arrow1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M2 1L8 5L2 9" fill="none" stroke="#8b6914" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </marker>
+              </defs>
+              <!-- Profit shading -->
+              <rect x="80" y="140" width="220" height="70" fill="#c9a84c" opacity="0.12"/>
+              <!-- Axes -->
+              <line x1="80" y1="30" x2="80" y2="390" stroke="#8b6914" stroke-width="1.5" marker-end="url(#arrow1)"/>
+              <line x1="80" y1="390" x2="620" y2="390" stroke="#8b6914" stroke-width="1.5" marker-end="url(#arrow1)"/>
+              <!-- Axis titles -->
+              <text x="40" y="210" text-anchor="middle" transform="rotate(-90,40,210)" fill="#6b5520" font-size="11" font-family="Montserrat,sans-serif" font-weight="400" letter-spacing="2">PRICE / COST ($)</text>
+              <text x="350" y="420" text-anchor="middle" fill="#6b5520" font-size="11" font-family="Montserrat,sans-serif" font-weight="400" letter-spacing="2">QUANTITY (Q)</text>
+              <!-- Demand curve D -->
+              <path d="M100 70 Q300 180 540 360" fill="none" stroke="#c9a84c" stroke-width="2"/>
+              <text x="548" y="358" fill="#c9a84c" font-size="13" font-family="Cormorant Garamond,serif" font-style="italic">D</text>
+              <!-- MR curve -->
+              <path d="M100 130 Q220 260 380 390" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="6 3" opacity="0.7"/>
+              <text x="354" y="386" fill="#c9a84c" font-size="13" font-family="Cormorant Garamond,serif" font-style="italic" opacity="0.7">MR</text>
+              <!-- MC curve -->
+              <path d="M140 340 Q240 180 350 130 Q420 105 500 115" fill="none" stroke="#e8d5a3" stroke-width="2" opacity="0.8"/>
+              <text x="508" y="118" fill="#e8d5a3" font-size="13" font-family="Cormorant Garamond,serif" font-style="italic" opacity="0.8">MC</text>
+              <!-- ATC curve -->
+              <path d="M120 310 Q240 200 310 210 Q400 220 500 240" fill="none" stroke="#7a6535" stroke-width="2"/>
+              <text x="508" y="243" fill="#7a6535" font-size="13" font-family="Cormorant Garamond,serif" font-style="italic">ATC</text>
+              <!-- Q* vertical dashed -->
+              <line x1="300" y1="140" x2="300" y2="390" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4"/>
+              <!-- P* horizontal dashed -->
+              <line x1="80" y1="140" x2="300" y2="140" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4"/>
+              <!-- ATC@Q* horizontal dashed -->
+              <line x1="80" y1="210" x2="300" y2="210" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4"/>
+              <!-- Dots -->
+              <circle cx="300" cy="140" r="4" fill="#c9a84c"/>
+              <circle cx="300" cy="210" r="4" fill="#7a6535"/>
+              <circle cx="290" cy="272" r="4" fill="#e8d5a3" opacity="0.8"/>
+              <!-- Axis labels -->
+              <text x="68" y="144" text-anchor="end" fill="#8b6914" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">P*</text>
+              <text x="68" y="214" text-anchor="end" fill="#7a6535" font-size="11" font-family="Cormorant Garamond,serif" font-style="italic">ATC</text>
+              <text x="300" y="408" text-anchor="middle" fill="#8b6914" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">Q*</text>
+              <!-- Profit label -->
+              <text x="175" y="178" text-anchor="middle" fill="#c9a84c" font-size="11" font-family="Montserrat,sans-serif" opacity="0.8">Economic profit</text>
+              <!-- MC=MR label -->
+              <text x="312" y="265" fill="#e8d5a3" font-size="11" font-family="Montserrat,sans-serif" opacity="0.7">MC = MR</text>
+              <!-- Title -->
+              <text x="350" y="18" text-anchor="middle" fill="#8b6914" font-size="10" font-family="Montserrat,sans-serif" font-weight="500" letter-spacing="3">STK TORONTO — MONOPOLISTIC COMPETITION (SHORT RUN)</text>
+            </svg>
+          </div>
+
         </div>
       </div>
 
+      <!-- MAIN CARD II: Supply, Demand & Market Equilibrium -->
       <div class="main-card">
         <span class="main-number">II</span>
         <p class="main-course-label">Second Course</p>
@@ -713,9 +789,62 @@
           <div class="main-divider"></div>
           <p>STK Toronto's supply is the products that they have on their menu; the profits made off these menu items are dependent on their demand curve, their pricing methods, and the specific profit margins made on each of these menu items. STK's steaks range from around $70–$250 with some specific outliers on the more expensive end with rare wagyu cuts. Most steaks sit around the $100 mark, which ties back to the reason why STK Steakhouse Toronto prices based on steakhouses of their caliber and level. STK Steakhouse could not use a steakhouse like The Keg's performance with their pricing to determine their own. This is because STK's beef and food quality is significantly higher than a steakhouse like The Keg, with a steak alone costing them about $40–$50. This shows a fairly strong profit margin of about 2–2.5 times the price. If they based their pricing off The Keg, their profit margins would be little to none, leading to economic losses when accounting for other external costs.</p>
           <p>The steak at STK Steakhouse may generate them the most revenue, but it is not their item with the highest profit margins. Due to the luxury experience provided by STK Toronto with their amazing location, quality of food, and unique vibe, they can price discriminate and upcharge on certain items to rake in extra profit. Bottled water costs STK about $1 to get but they can sell it for $10–$15, giving an absolutely huge 10–15x profit margin.</p>
+
+          <!-- GRAPH 2: Demand Curve Shift -->
+          <div class="graph-wrap">
+            <p class="graph-label">Economic Model</p>
+            <svg width="100%" viewBox="0 0 680 430" role="img" xmlns="http://www.w3.org/2000/svg">
+              <title>Demand curve shift for STK Toronto due to economic downturn</title>
+              <desc>Graph showing leftward shift in STK Toronto's demand curve caused by falling GDP, rising inflation, and unemployment in Toronto.</desc>
+              <defs>
+                <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M2 1L8 5L2 9" fill="none" stroke="#8b6914" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </marker>
+                <marker id="arrow2r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M2 1L8 5L2 9" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </marker>
+              </defs>
+              <!-- Axes -->
+              <line x1="80" y1="30" x2="80" y2="375" stroke="#8b6914" stroke-width="1.5" marker-end="url(#arrow2)"/>
+              <line x1="80" y1="375" x2="600" y2="375" stroke="#8b6914" stroke-width="1.5" marker-end="url(#arrow2)"/>
+              <text x="40" y="205" text-anchor="middle" transform="rotate(-90,40,205)" fill="#6b5520" font-size="11" font-family="Montserrat,sans-serif" font-weight="400" letter-spacing="2">PRICE ($)</text>
+              <text x="340" y="410" text-anchor="middle" fill="#6b5520" font-size="11" font-family="Montserrat,sans-serif" font-weight="400" letter-spacing="2">QUANTITY (Q)</text>
+              <!-- D1 original -->
+              <path d="M160 60 Q340 190 540 350" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
+              <text x="548" y="350" fill="#c9a84c" font-size="13" font-family="Cormorant Garamond,serif" font-style="italic">D₁</text>
+              <!-- D2 shifted left -->
+              <path d="M90 80 Q240 200 420 355" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="7 3" opacity="0.5"/>
+              <text x="428" y="356" fill="#c9a84c" font-size="13" font-family="Cormorant Garamond,serif" font-style="italic" opacity="0.55">D₂</text>
+              <!-- Shift arrow -->
+              <path d="M370 178 L272 208" fill="none" stroke="#e8d5a3" stroke-width="1.5" marker-end="url(#arrow2)" opacity="0.6"/>
+              <text x="362" y="170" text-anchor="middle" fill="#e8d5a3" font-size="10" font-family="Montserrat,sans-serif" opacity="0.6" letter-spacing="1">LEFTWARD SHIFT</text>
+              <!-- P1, Q1 -->
+              <line x1="80" y1="190" x2="340" y2="190" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4"/>
+              <line x1="340" y1="190" x2="340" y2="375" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4"/>
+              <circle cx="340" cy="190" r="4" fill="#c9a84c"/>
+              <text x="66" y="194" text-anchor="end" fill="#8b6914" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">P₁</text>
+              <text x="340" y="392" text-anchor="middle" fill="#8b6914" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">Q₁</text>
+              <!-- P2, Q2 -->
+              <line x1="80" y1="255" x2="225" y2="255" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+              <line x1="225" y1="255" x2="225" y2="375" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+              <circle cx="225" cy="255" r="4" fill="#c9a84c" opacity="0.55"/>
+              <text x="66" y="259" text-anchor="end" fill="#8b6914" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic" opacity="0.6">P₂</text>
+              <text x="225" y="392" text-anchor="middle" fill="#8b6914" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic" opacity="0.6">Q₂</text>
+              <!-- Causes box -->
+              <rect x="430" y="55" width="185" height="105" rx="4" fill="none" stroke="#2a2218" stroke-width="1"/>
+              <text x="522" y="76" text-anchor="middle" fill="#6b5520" font-size="9" font-family="Montserrat,sans-serif" font-weight="500" letter-spacing="2">CAUSES OF SHIFT</text>
+              <text x="522" y="97" text-anchor="middle" fill="#7a6535" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">↓ GDP growth</text>
+              <text x="522" y="116" text-anchor="middle" fill="#7a6535" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">↑ Inflation</text>
+              <text x="522" y="135" text-anchor="middle" fill="#7a6535" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">↑ Unemployment (8.2%)</text>
+              <!-- Title -->
+              <text x="350" y="18" text-anchor="middle" fill="#8b6914" font-size="10" font-family="Montserrat,sans-serif" font-weight="500" letter-spacing="3">STK TORONTO — DEMAND CURVE SHIFT (ECONOMIC DOWNTURN)</text>
+            </svg>
+          </div>
+
         </div>
       </div>
 
+      <!-- MAIN CARD III: Price Elasticity of Demand -->
       <div class="main-card">
         <span class="main-number">III</span>
         <p class="main-course-label">Third Course</p>
@@ -726,6 +855,65 @@
           <p>The goal for a steakhouse is to make it as inelastic as possible to ensure that even if they have to increase the price, they can retain their customer base and generate revenue, not losing revenue due to a price increase. However, the reality is that the elasticity of the steakhouse depends heavily on the performance of the economy in the area. STK Steakhouse is considered a luxury good offering top-quality food, experience, and vibe. Due to the fact that Canada's economy is performing poorly right now with slowing GDP rates, increasing inflation rates, and major unemployment in Toronto, STK Steakhouse Toronto is more elastic currently.</p>
           <p>Abid Chaudry owns several different restaurants across the globe and he stated that in Toronto specifically, he sees the most issue. He finds that the elasticity of demand for STK Steakhouse Toronto is significantly higher than luxury restaurants across the globe. An example that he gave was if you go to Alberta, luxury coffee shops have significant lines with luxury goods being significantly bought and used there due to the strength of the economy — showing more inelasticity where a slight price increase would retain most of their consumer base.</p>
           <p>Another issue that makes STK Steakhouse Toronto specifically more elastic during economic downturns is from its consumer base that uses it as a place of business. When the economy is doing well, real estate agents make more deals and bring their customers to STK Toronto, allowing them to expand their business through referrals and accumulating more customers. This is a significant driver of STK Toronto's consumer base which occurs during economic growth and upturns — so when the market is slow, STK also loses this sector of their consumer base entirely.</p>
+
+          <!-- GRAPH 3: PED -->
+          <div class="graph-wrap">
+            <p class="graph-label">Economic Model</p>
+            <svg width="100%" viewBox="0 0 680 430" role="img" xmlns="http://www.w3.org/2000/svg">
+              <title>Price elasticity of demand diagram for STK Toronto</title>
+              <desc>Graph comparing elastic vs inelastic demand curves, showing STK Toronto's position shifts more elastic during economic downturns.</desc>
+              <defs>
+                <marker id="arrow3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M2 1L8 5L2 9" fill="none" stroke="#8b6914" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </marker>
+                <marker id="arrow3g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M2 1L8 5L2 9" fill="none" stroke="#6b5520" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </marker>
+                <marker id="arrow3r" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M2 1L8 5L2 9" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </marker>
+              </defs>
+              <!-- Axes -->
+              <line x1="80" y1="30" x2="80" y2="375" stroke="#8b6914" stroke-width="1.5" marker-end="url(#arrow3)"/>
+              <line x1="80" y1="375" x2="600" y2="375" stroke="#8b6914" stroke-width="1.5" marker-end="url(#arrow3)"/>
+              <text x="40" y="205" text-anchor="middle" transform="rotate(-90,40,205)" fill="#6b5520" font-size="11" font-family="Montserrat,sans-serif" font-weight="400" letter-spacing="2">PRICE ($)</text>
+              <text x="340" y="410" text-anchor="middle" fill="#6b5520" font-size="11" font-family="Montserrat,sans-serif" font-weight="400" letter-spacing="2">QUANTITY (Q)</text>
+              <!-- Inelastic (steep) — strong economy -->
+              <path d="M240 50 Q270 200 300 370" fill="none" stroke="#e8d5a3" stroke-width="2.5" opacity="0.7"/>
+              <text x="308" y="330" fill="#e8d5a3" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic" opacity="0.7">D (inelastic)</text>
+              <text x="308" y="346" fill="#6b5520" font-size="10" font-family="Montserrat,sans-serif" letter-spacing="1" opacity="0.7">STRONG ECONOMY</text>
+              <!-- Elastic (flat) — weak economy -->
+              <path d="M100 120 Q280 200 555 278" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
+              <text x="468" y="260" fill="#c9a84c" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">D (elastic)</text>
+              <text x="468" y="275" fill="#8b6914" font-size="10" font-family="Montserrat,sans-serif" letter-spacing="1">ECONOMIC DOWNTURN</text>
+              <!-- Price increase arrow -->
+              <line x1="80" y1="235" x2="80" y2="155" stroke="#6b5520" stroke-width="1.5" marker-end="url(#arrow3)"/>
+              <text x="67" y="200" text-anchor="end" fill="#6b5520" font-size="11" font-family="Cormorant Garamond,serif" font-style="italic">ΔP</text>
+              <!-- Inelastic dashed lines -->
+              <line x1="80" y1="155" x2="268" y2="155" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+              <line x1="80" y1="235" x2="281" y2="235" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+              <line x1="268" y1="155" x2="268" y2="375" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+              <line x1="281" y1="235" x2="281" y2="375" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+              <!-- Small ΔQ arrow for inelastic -->
+              <line x1="268" y1="363" x2="281" y2="363" stroke="#e8d5a3" stroke-width="2" marker-end="url(#arrow3)" opacity="0.7"/>
+              <text x="275" y="395" text-anchor="middle" fill="#e8d5a3" font-size="10" font-family="Montserrat,sans-serif" opacity="0.6" letter-spacing="1">SMALL ΔQ</text>
+              <!-- Elastic dashed lines -->
+              <line x1="80" y1="155" x2="193" y2="155" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+              <line x1="80" y1="235" x2="377" y2="235" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+              <line x1="193" y1="155" x2="193" y2="375" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+              <line x1="377" y1="235" x2="377" y2="375" stroke="#6b5520" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+              <!-- Large ΔQ arrow for elastic -->
+              <line x1="193" y1="390" x2="377" y2="390" stroke="#c9a84c" stroke-width="2" marker-end="url(#arrow3r)" opacity="0.8"/>
+              <text x="285" y="415" text-anchor="middle" fill="#c9a84c" font-size="10" font-family="Montserrat,sans-serif" letter-spacing="1">LARGE ΔQ</text>
+              <!-- STK position box -->
+              <rect x="400" y="48" width="190" height="56" rx="4" fill="none" stroke="#2a2218" stroke-width="1"/>
+              <text x="495" y="68" text-anchor="middle" fill="#6b5520" font-size="9" font-family="Montserrat,sans-serif" font-weight="500" letter-spacing="2">STK TORONTO (2026)</text>
+              <text x="495" y="88" text-anchor="middle" fill="#c9a84c" font-size="12" font-family="Cormorant Garamond,serif" font-style="italic">Currently more elastic</text>
+              <!-- Title -->
+              <text x="350" y="18" text-anchor="middle" fill="#8b6914" font-size="10" font-family="Montserrat,sans-serif" font-weight="500" letter-spacing="3">STK TORONTO — PRICE ELASTICITY OF DEMAND</text>
+            </svg>
+          </div>
+
         </div>
       </div>
 
